@@ -13,7 +13,7 @@ def login_twitter
 	end
 	return client
 end
-# ligne qui permet de tweeter sur ton compte
+
 
 client = Twitter::REST::Client.new do |config|
 	config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
@@ -27,3 +27,6 @@ id = journalist_list.sample(5)
 id.each do |name|
 	client.update("Hello #{name} Super ton dernier article!! Sorry pour le spam c'est un test @the_hacking_pro #bonjour_monde !!!!")
 end
+
+# => client.update("Hello !!)
+# ligne qui permet de tweeter sur ton compte
